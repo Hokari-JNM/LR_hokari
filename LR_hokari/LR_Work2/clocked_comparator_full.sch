@@ -180,14 +180,18 @@ C {ipin.sym} 240 -700 0 0 {name=p9 lab=INP}
 C {ipin.sym} 560 -700 2 0 {name=p10 lab=INM}
 C {vdd.sym} 400 -770 0 0 {name=l7 lab=VDD}
 C {ipin.sym} 80 -320 0 0 {name=p11 lab=CLK}
-C {code_shown.sym} 720 -110 0 0 {name=spice1 only_toplevel=false value="
+C {code_shown.sym} 700 -170 0 0 {name=spice1 only_toplevel=false value="
 
 .inc /home/hnriv/models_035/model035.txt
 
 VVDD VDD 0 DC 3.3
 
-VINP INP 0 pwl (0   0 100n 3.3 200n   0 300n 3.3 400n   0 500n 3.3)
-VINM INM 0 pwl (0 3.3 100n   0 200n 3.3 300n   0 400n 3.3 500n 0)
+
+VINM INM 0 DC 1.65
+VEN  EN  0 DC 3.3
+
+*VINP INP 0 pwl (0   0 100n 3.3 200n   0 300n 3.3 400n   0 500n 3.3)
+*VINM INM 0 pwl (0 3.3 100n   0 200n 3.3 300n   0 400n 3.3 500n 0)
 
 *VINP INP 0 pwl (0 2.5 100n 3.3 200n 2.5 300n 3.3 400n 2.5 500n 3.3)
 *VINM INM 0 pwl (0 3.3 100n 2.5 200n 3.3 300n 2.5 400n 3.3 500n 2.5)
@@ -195,17 +199,26 @@ VINM INM 0 pwl (0 3.3 100n   0 200n 3.3 300n   0 400n 3.3 500n 0)
 *VINP INP 0 pwl (0   0 100n 0.8 200n   0 300n 0.8 400n   0 500n 0.8)
 *VINM INM 0 pwl (0 0.8 100n   0 200n 0.8 300n   0 400n 0.8 500n 0)
 
+*VINP INP 0 pwl (0   0 100n 0.8 200n   0 300n 0.8 400n   0 500n 0.8)
+*VINM INM 0 pwl (0 0.8 100n   0 200n 0.8 300n   0 400n 0.8 500n 0)
+
+VINP INP 0 pwl (0 1.05 100n 2.25 200n  1.05 300n 2.25 400n  1.05 500n 2.25)
+*VINM INM 0 pwl (0  0.8 200n    0 400n   0.8 600n   0 800n 0.8 1000n 0)
+
+*VCLK CLK 0 pulse(0.3.3 0n 1n 1n 50n 100n)
 
 VCLK CLK 0 pulse(0 3.3 25n 1n 1n 50n 100n)
-ven EN 0 pulse(0 3.3 0n 1n 1n 200n 252n)
+*ven EN 0 pulse(0 3.3 0n 1n 1n 200n 252n)
 
 .control
-tran 1n 400n
+tran 1n 500n
 
-plot v(OUT)
-plot v(CLK)
-plot v(INP)
-plot v(INM)
+*plot v(OUT)
+*plot v(CLK)
+*plot v(INP)
+*plot v(INM)
+*plot v(COMPA)
+*plot v(COMPB)
 
 write "clocked_comparator_full.raw"
 

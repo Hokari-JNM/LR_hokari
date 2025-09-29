@@ -25,7 +25,7 @@ C {ipin.sym} -260 -80 0 0 {name=p1 lab=EN}
 C {ipin.sym} -260 -100 0 0 {name=p3 lab=IN1}
 C {opin.sym} 140 -60 0 0 {name=p4 lab=OUT}
 C {ipin.sym} -260 -20 0 0 {name=p2 lab=IN2}
-C {LR-hasegawa/task_LATCH/2NANDLR.sym} 40 -90 0 0 {name=x5}
-C {LR-hasegawa/task_LATCH/2NANDLR.sym} 40 -30 0 0 {name=x6}
-C {LR-hasegawa/task_LATCH/2NANDLR.sym} 150 -60 0 0 {name=x7}
-C {LR-hasegawa/task_LATCH/INVERTER.sym} 10 -80 0 0 {name=x1}
+C {LR_Work2/symbol/2NANDLR.sym} 150 -60 0 0 {name=x2}
+C {LR_Work2/symbol/2NANDLR.sym} 40 -90 0 0 {name=x3}
+C {LR_Work2/symbol/2NANDLR.sym} 40 -30 0 0 {name=x4}
+C {LR_Work2/symbol/INVERTER.sym} 10 -80 0 0 {name=x1}
