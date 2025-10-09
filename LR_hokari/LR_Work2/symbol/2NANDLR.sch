@@ -32,10 +32,10 @@ N 160 180 180 180 {lab=GND}
 N 180 140 180 180 {lab=GND}
 N 160 140 180 140 {lab=GND}
 N 160 170 160 200 {lab=GND}
-C {NMOS_MIN.sym} 120 30 0 0 {name=M1 model=nch w=3.5u l=3.5u as=0 ps=0 ad=0 pd=0 m=1}
-C {PMOS_MIN.sym} -40 -120 0 0 {name=M2 model=pch w=10.5u l=3.5u as=0 ps=0 ad=0 pd=0 m=1}
-C {PMOS_MIN.sym} 120 -120 0 0 {name=M3 model=pch w=10.5u l=3.5u as=0 ps=0 ad=0 pd=0 m=1}
-C {NMOS_MIN.sym} 120 140 0 0 {name=M4 model=nch w=3.5u l=10.5u as=0 ps=0 ad=0 pd=0 m=1}
+C {NMOS_MIN.sym} 120 30 0 0 {name=M1 model=nch w=1u l=0.35u as=0 ps=0 ad=0 pd=0 m=1}
+C {PMOS_MIN.sym} -40 -120 0 0 {name=M2 model=pch w=1u l=0.35u as=0 ps=0 ad=0 pd=0 m=1}
+C {PMOS_MIN.sym} 120 -120 0 0 {name=M3 model=pch w=1u l=0.35u as=0 ps=0 ad=0 pd=0 m=1}
+C {NMOS_MIN.sym} 120 140 0 0 {name=M4 model=nch w=1u l=0.35u as=0 ps=0 ad=0 pd=0 m=1}
 C {vdd.sym} 160 -180 0 0 {name=l1 lab=VDD}
 C {gnd.sym} 160 200 0 0 {name=l2 lab=GND}
 C {ipin.sym} -110 30 0 0 {name=p2 lab=A}
